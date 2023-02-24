@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app-deploy
+  labels:
+    name: webapp01
+    app: website
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: web-app-pod
+      app: website
+  template:
+    metadata:
+      name: web-app-pod
+      labels:
+        name: web-app-pod
+        app: website
+    spec:
+      containers:
+        - name: webapp01
+          image: 3niola/webapp
+          ports:
+            - containerPort: 80

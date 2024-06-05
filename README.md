@@ -44,7 +44,7 @@ The `service.yaml` file defines a Kubernetes service named `web-app`. This servi
 Use the following command to deploy the application to your Kubernetes cluster:
 
 ```sh
-`kubectl apply -f deployment.yaml -f service.yaml`
+kubectl apply -f deployment.yaml -f service.yaml
 ```
 
 ### 5. Accessing the Application
